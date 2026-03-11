@@ -47,6 +47,53 @@ class Solution {
         Arrays.sort(b);
           return Arrays.equals(a,b);}}
 ---------------------------------------------------------------------------
+5.Max Consecutive Ones
+class Solution {
+    public int findMaxConsecutiveOnes(int[] nums) {
+
+        int count = 0;
+        int max = 0;
+
+        for(int i = 0; i < nums.length; i++) {
+
+            if(nums[i] == 1){
+                count++;
+
+                if(count > max){
+                    max = count;
+                } } else {
+                count = 0;
+            }}
+return max;}}
+--------------------------------------------------------------------
+6.Append Characters to String to Make Subsequence
+class Solution {
+    public int appendCharacters(String s, String t) {
+
+        int i = 0;
+        int j = 0;
+        
+                while(i < s.length() && j < t.length()){
+
+            if(s.charAt(i) == t.charAt(j)){
+                j++;
+            }
+ i++; }
+
+        return t.length() - j;
+    }}
+-------------------------------------------------------------------
+7.Length Of Last Word
+class Solution {
+    public int lengthOfLastWord(String s) {
+       int count=0;
+       String[]W= s.trim().split(" ");
+       count= W[W.length-1].length();
+    
+    return count;
+}}
+         
+
 
 
 
